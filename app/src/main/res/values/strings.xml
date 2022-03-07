@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">LatihanSatu</string>
+    <string name="name">Alamanda Shantika Santoso</string>
+    <string name="dot">·</string>
+    <string name="stat">1st</string>
+    <string name="bio">Cracking the human brain to make learning as fun as watching Netflix, as addictive as browsing your Instagram feed</string>
+    <string name="under_bio">Talks about #techforgood and #sosialentepreneurship</string>
+    <string name="job">Binar Academy</string>
+    <string name="place">Jakarta, Jakarta, Indonesia</string>
+    <string name="no_foll">24,342</string>
+    <string name="no_con">500+</string>
+    <string name="foll">followers</string>
+    <string name="con">connection</string>
+    <string name="mutual"><b>307 mutual connections:</b> Dr. Pratama Persadha,Norman Sasono, and 305 others</string>
+    <string name="message">Message</string>
+    <string name="hire_header">Hiring a Business Analyst &amp; 1 other</string>
+    <string name="hire_bio">Binar Academy · Jakarta Metropolitan Area · 300 days ago</string>
+    <string name="hire_view">View both jobs</string>
+    <string name="hightlights">Highlights</string>
+    <string name="hightlights_header">You both work at Binar Academy</string>
+    <string name="hightlights_desc">Alamanda started at Binar Academy 3 years before you did</string>
+ <!--   <string name=""></string>
+    <string name=""></string>-->
+
+
+</resources>

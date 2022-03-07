@@ -1,0 +1,406 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/white">
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/search_bar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/header"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <ImageButton
+          android:id="@+id/back"
+          android:src="@drawable/ic_back"
+          android:background="@color/white"
+          app:layout_constraintTop_toTopOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintBottom_toBottomOf="@id/search_bar"
+          android:layout_marginLeft="14dp"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"/>
+
+      <SearchView
+          android:layout_width="0dp"
+          android:layout_height="35dp"
+          android:layout_marginStart="8dp"
+          android:layout_marginTop="8dp"
+          android:layout_marginBottom="8dp"
+          android:layout_marginEnd="14dp"
+          android:background="@drawable/hire_round"
+          android:backgroundTint="@color/warna_binar"
+          app:layout_constraintBottom_toBottomOf="@id/search_bar"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toEndOf="@id/back"
+          app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.23" />
+
+    <!--Header-->
+
+    <!--Foto Profil-->
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="447dp"
+        android:layout_height="133dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/header"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/search_bar"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/profil"
+        android:layout_width="121dp"
+        android:layout_height="119dp"
+        android:layout_marginLeft="14dp"
+        android:src="@drawable/profil"
+        app:layout_constraintBottom_toBottomOf="@id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline" />
+
+    <!--Online dibawah profil-->
+    <ImageView
+        android:id="@+id/online"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_marginLeft="-30dp"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/ic_online"
+        app:layout_constraintBottom_toBottomOf="@id/profil"
+        app:layout_constraintStart_toEndOf="@id/profil" />
+
+    <ImageButton
+        app:layout_constraintTop_toTopOf="@id/guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="14dp"
+        android:layout_marginTop="14dp"
+        android:id="@+id/notification"
+        android:src="@drawable/ic_notification"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:layout_width="25dp"
+        android:layout_height="25dp"/>
+
+    <TextView
+        android:id="@+id/name"
+        app:layout_constraintTop_toBottomOf="@id/profil"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/name"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/dot"
+        android:text="@string/dot"
+        app:layout_constraintStart_toEndOf="@id/name"
+        app:layout_constraintTop_toTopOf="@id/name"
+        android:layout_marginLeft="5dp"
+        android:textSize="20dp"
+        android:textColor="@color/sub_color"
+        app:layout_constraintBottom_toBottomOf="@id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/stat"
+        android:text="@string/stat"
+        app:layout_constraintStart_toEndOf="@id/dot"
+        app:layout_constraintTop_toTopOf="@id/name"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/sub_color"
+        app:layout_constraintBottom_toBottomOf="@id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/bio"
+        android:text="@string/bio"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="35dp"
+        android:textColor="@color/black"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/under_bio"
+        android:text="@string/under_bio"
+        app:layout_constraintTop_toBottomOf="@id/bio"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="35dp"
+        android:textColor="@color/sub_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/job"
+        android:text="@string/job"
+        app:layout_constraintTop_toBottomOf="@id/under_bio"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="12dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/place"
+        android:text="@string/place"
+        app:layout_constraintTop_toBottomOf="@id/job"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="14dp"
+        android:textColor="@color/sub_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/no_followers"
+        android:text="@string/no_foll"
+        app:layout_constraintTop_toBottomOf="@id/place"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="14dp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/followers"
+        android:text="@string/foll"
+        app:layout_constraintTop_toTopOf="@id/no_followers"
+        app:layout_constraintBottom_toBottomOf="@id/no_followers"
+        app:layout_constraintStart_toEndOf="@id/no_followers"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/dotdua"
+        android:text="@string/dot"
+        app:layout_constraintStart_toEndOf="@id/followers"
+        app:layout_constraintTop_toTopOf="@id/followers"
+        app:layout_constraintBottom_toBottomOf="@id/followers"
+        android:layout_marginLeft="5dp"
+        android:textSize="20dp"
+        android:textColor="@color/sub_color"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/no_connection"
+        android:text="@string/no_con"
+        app:layout_constraintTop_toTopOf="@id/dotdua"
+        app:layout_constraintBottom_toBottomOf="@id/dotdua"
+        app:layout_constraintStart_toEndOf="@id/dotdua"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/warna_binar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/connection"
+        android:text="@string/con"
+        app:layout_constraintTop_toTopOf="@id/no_connection"
+        app:layout_constraintBottom_toBottomOf="@id/no_connection"
+        app:layout_constraintStart_toEndOf="@id/no_connection"
+        android:textStyle="bold"
+        android:layout_marginLeft="5dp"
+        android:textColor="@color/warna_binar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/foto_dua"
+        app:layout_constraintTop_toBottomOf="@id/no_followers"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="12dp"
+        android:src="@drawable/fotodua"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+
+    <ImageView
+        android:id="@+id/foto_satu"
+        app:layout_constraintTop_toTopOf="@id/foto_dua"
+        app:layout_constraintBottom_toBottomOf="@id/foto_dua"
+        app:layout_constraintStart_toEndOf="@id/foto_dua"
+        android:layout_marginLeft="-10dp"
+        android:src="@drawable/fotosatu"
+        android:layout_width="30dp"
+        android:layout_height="30dp"/>
+
+    <TextView
+        android:id="@+id/mutual"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:text="@string/mutual"
+        android:textColor="@color/sub_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/foto_satu"
+        app:layout_constraintTop_toTopOf="@id/foto_dua" />
+
+    <Button
+        android:id="@+id/pesan"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/roundedbutton"
+        android:text="@string/message"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toStartOf="@id/more"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/mutual" />
+
+    <ImageButton
+        android:id="@+id/more"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="14dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_more"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/pesan"
+        app:layout_constraintStart_toEndOf="@id/pesan"
+        app:layout_constraintTop_toTopOf="@id/pesan"/>
+
+    <LinearLayout
+        android:id="@+id/hiring"
+        app:layout_constraintTop_toBottomOf="@id/pesan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="14dp"
+        android:layout_marginRight="14dp"
+        android:padding="14dp"
+        android:background="@drawable/hire_round">
+
+      <TextView
+          android:text="@string/hire_header"
+          android:textColor="@color/black"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:textStyle="bold"/>
+
+      <TextView
+          android:text="@string/hire_bio"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:textColor="@color/black" />
+
+      <TextView
+          android:text="@string/hire_view"
+          android:textColor="@color/warna_binar"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:textStyle="bold" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pemisah"
+        app:layout_constraintTop_toBottomOf="@id/hiring"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/binar_tiga"
+        android:layout_marginTop="14dp"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"/>
+
+    <TextView
+        android:id="@+id/highlights"
+        android:text="@string/hightlights"
+        app:layout_constraintTop_toBottomOf="@id/pemisah"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="14dp"
+        android:layout_marginLeft="14dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/logo"
+        app:layout_constraintTop_toBottomOf="@id/highlights"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="14dp"
+        android:src="@drawable/binar_logo"
+        android:layout_width="45dp"
+        android:layout_height="45dp"/>
+
+    <TextView
+        android:id="@+id/highlights_header"
+        android:text="@string/hightlights_header"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="@id/logo"
+        app:layout_constraintStart_toEndOf="@id/logo"
+        android:layout_marginLeft="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/highlights_desc"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/hightlights_desc"
+        android:textColor="@color/sub_color"
+        android:layout_marginRight="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/highlights_header"
+        app:layout_constraintTop_toBottomOf="@id/highlights_header" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/highlights_desc"
+        app:layout_constraintStart_toStartOf="@id/highlights_desc"
+        android:text="Message"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/roundedbutton_white"
+        android:textColor="@color/sub_color"
+        android:textAllCaps="false"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"/>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
