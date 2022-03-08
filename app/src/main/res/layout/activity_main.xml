@@ -181,6 +181,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <!--Followrs Angka-->
     <TextView
         android:id="@+id/no_followers"
         android:text="@string/no_foll"
@@ -193,6 +194,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
+    <!--Followes Text-->
     <TextView
         android:id="@+id/followers"
         android:text="@string/foll"
