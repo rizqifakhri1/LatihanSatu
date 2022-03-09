@@ -14,3 +14,7 @@ class MainActivity : AppCompatActivity() {
 fun rizqikeren(){
     //method rizqi keren
 }
+
+fun rizqipinter(){
+
+}
